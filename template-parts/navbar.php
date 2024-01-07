@@ -1,3 +1,14 @@
+<?php
+
+$menu_class = \Aquila_Theme\Inc\Menus::get_instance();
+
+//$menu_class->get_menu_id('aquila-header-menu');
+
+print_r(get_nav_menu_locations());
+wp_die();
+
+?>
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
   <div class="site-logo">
