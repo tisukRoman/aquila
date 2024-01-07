@@ -14,7 +14,15 @@ class AQUILA_THEME {
 
   protected function __construct(){
     Assets::get_instance();
+
+    $this->setup_hooks();
   }
 
-  protected function setup_hooks() {}
+  protected function setup_hooks() {
+    add_action('after_setup_theme', [$this, 'setup_theme']);
+  }
+
+  public function setup_theme(){
+    add_theme_support('title-tag');
+  }
 }
