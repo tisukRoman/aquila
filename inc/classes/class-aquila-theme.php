@@ -24,5 +24,13 @@ class AQUILA_THEME {
 
   public function setup_theme(){
     add_theme_support('title-tag');
+
+    add_theme_support('custom-logo', [
+      'header-text' => ['site-title', 'site-description'],
+      'height' => 100,
+      'width' => 100,
+      'flex-width' => true,
+      'flex-height' => true,
+    ]);
   }
 }
