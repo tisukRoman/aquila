@@ -28,7 +28,27 @@ class Menus {
     ]);
   }
 
-  public function get_menu_id($location){
-    return get_nav_menu_locations()[$location];
+  public function get_menu_id($location): int | false {
+    $locations = get_nav_menu_locations();
+
+    $menu_id = $locations[$location];
+
+    return !empty($menu_id) ? $menu_id : false;
+  }
+
+  public function get_child_menu_items($menu_array, $parent_id): array | false {
+    $child_menus = [];
+
+    if(empty($menu_array) || !is_array($menu_array)){
+      return false;
+    }
+
+    foreach ($menu_array as $menu) {
+      if(intval($menu->menu_item_parent) === $parent_id){
+        array_push($child_menus, $menu);
+      }
+    }
+
+    return $child_menus;
   }
 }
