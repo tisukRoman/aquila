@@ -65,5 +65,10 @@ class AQUILA_THEME {
     if ( !isset($content_width) ) {
       $content_width = 1240;
     }
+
+    /**
+     * Register image sizes.
+     */
+    add_image_size('featured-large', 353, 233, true);
   }
 }

@@ -14,6 +14,7 @@ if(!defined('AQUILA_DIR_URI')) {
 }
 
 require_once AQUILA_DIR_PATH . '/inc/helpers/autoloader.php';
+require_once AQUILA_DIR_PATH . '/inc/helpers/template-tags.php';
 
 use AQUILA_THEME\Inc\AQUILA_THEME;
 
