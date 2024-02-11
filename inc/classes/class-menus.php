@@ -10,7 +10,6 @@ namespace AQUILA_THEME\Inc;
 use AQUILA_THEME\Inc\Traits\Singleton;
 
 class Menus {
-
   use Singleton;
 
   protected function __construct() {
